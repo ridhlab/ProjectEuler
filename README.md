@@ -1,2 +1,2 @@
 # ProjectEuler
-Repositery ini adalah kumpulan code python untuk menyelesaikan problem di Project Euler
+This is my repo which contain code to solve [ProjectEuler](https://projecteuler.net/) problem.
