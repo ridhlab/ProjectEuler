@@ -1,15 +1,15 @@
 // Largest Prima Factor
 
 function getListPrimeNumbers(max) {
-  let listPrimeFactor = [];
+  let listPrimeNumbers = [];
   for (let i = 2; i <= max; i++) {
     if (i === 2) {
-      listPrimeFactor.push(i);
+      listPrimeNumbers.push(i);
       continue;
     }
     for (let j = 2; j < i; j++) {
       if (j === i - 1) {
-        listPrimeFactor.push(i);
+        listPrimeNumbers.push(i);
       }
       if (i % j === 0) {
         break;
@@ -18,7 +18,7 @@ function getListPrimeNumbers(max) {
       }
     }
   }
-  return listPrimeFactor;
+  return listPrimeNumbers;
 }
 function getlistPrimeFactor(listPrimeNumbers, num) {
   let listPrimeFactor = [];
@@ -30,10 +30,10 @@ function getlistPrimeFactor(listPrimeNumbers, num) {
   return listPrimeFactor;
 }
 
-const num = 99870;
+const num = 1000;
 
 const listPrimeNumbers = getListPrimeNumbers(num);
 
 const listPrimeFactor = getlistPrimeFactor(listPrimeNumbers, num);
 
-console.log(listPrimeFactor);
+console.log(listPrimeNumbers);
