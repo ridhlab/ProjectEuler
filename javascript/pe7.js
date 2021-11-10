@@ -1,25 +1,29 @@
 // 10001st Prime
 
-const num = 10001;
-let listPrimeNumbers = [];
-let temp = 2;
-while (true) {
-  if (temp === 2) {
-    listPrimeNumbers.push(temp);
-  }
-  for (let i = 2; i < temp; i++) {
-    if (i === temp - 1) {
-      listPrimeNumbers.push(temp);
+function getNthPrime(num) {
+  let listPrimeNumbers = [];
+  let tempNum = 2;
+  while (true) {
+    if (tempNum === 2) {
+      listPrimeNumbers.push(tempNum);
     }
-    if (temp % i === 0) {
+    for (let i = 2; i < tempNum; i++) {
+      if (i === tempNum - 1) {
+        listPrimeNumbers.push(tempNum);
+      }
+      if (tempNum % i === 0) {
+        break;
+      } else {
+        continue;
+      }
+    }
+    if (listPrimeNumbers.length === num) {
       break;
-    } else {
-      continue;
     }
+    tempNum++;
   }
-  if (listPrimeNumbers.length === num) {
-    break;
-  }
-  temp++;
+  return listPrimeNumbers;
 }
-console.log(listPrimeNumbers.slice(-1)[0]);
+
+const num = 123;
+console.log(getNthPrime(num).slice(-1)[0]);

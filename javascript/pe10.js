@@ -21,10 +21,15 @@ function getListPrimeNumbers(max) {
   return listPrimeNumbers;
 }
 
-const num = 1000;
-const listPrimeNumbers = getListPrimeNumbers(num);
-let res = 0;
-for (let i = 0; i < listPrimeNumbers.length; i++) {
-  res += listPrimeNumbers[i];
+function getSummationOfPrime(listPrimeNumbers) {
+  let res = 0;
+  for (let i = 0; i < listPrimeNumbers.length; i++) {
+    res += listPrimeNumbers[i];
+  }
+  return res;
 }
-console.log(res);
+
+const num = 17;
+const listPrimeNumbers = getListPrimeNumbers(num);
+
+console.log(getSummationOfPrime(listPrimeNumbers));
